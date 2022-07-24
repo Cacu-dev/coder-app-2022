@@ -1,6 +1,11 @@
 import NavBar from "./components/NavBar/NavBar";
 function App() {
-  return <NavBar />;
+  return (
+    <>
+      <NavBar />
+      <h1>PROXIMAMENTE...</h1>
+    </>
+  );
 }
 
 export default App;
