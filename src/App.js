@@ -1,9 +1,10 @@
 import NavBar from "./components/NavBar/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 function App() {
   return (
     <>
       <NavBar />
-      <h1>PROXIMAMENTE...</h1>
+      <ItemListContainer title="PROXIMAMENTE..." />
     </>
   );
 }
