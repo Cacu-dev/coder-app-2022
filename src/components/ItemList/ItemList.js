@@ -2,8 +2,7 @@ import React from "react";
 import Item from "../Item/Item";
 
 const ItemList = ({ data }) => {
-  console.log("Data", data);
-  return data.map((item) => {
+  return data.map((item) => (
     <div key={item.id}>
       <Item
         title={item.title}
@@ -11,8 +10,8 @@ const ItemList = ({ data }) => {
         price={item.price}
         pictureUrl={item.pictureUrl}
       />
-    </div>;
-  });
+    </div>
+  ));
 };
 
 export default ItemList;
