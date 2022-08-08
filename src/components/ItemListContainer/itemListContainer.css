@@ -1,0 +1,4 @@
+.item__listContainer {
+  display: grid;
+  flex-direction: row;
+}

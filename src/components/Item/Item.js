@@ -1,12 +1,17 @@
 import React from "react";
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
+import "./Item.css";
 
 const Item = ({ title, description, price, pictureUrl }) => {
   return (
     <>
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <p>{price}</p>
-      <img src={pictureUrl} />
+      <div className="card">
+        <img src={pictureUrl} className="card__img" alt="foto" />
+        <h1 className="card__title">{title}</h1>
+        <p className="card__paragraph">{description}</p>
+        <p>{price}</p>
+        <button>Ver</button>
+      </div>
     </>
   );
 };
