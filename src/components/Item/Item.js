@@ -1,5 +1,4 @@
 import React from "react";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import "./Item.css";
 
 const Item = ({ title, description, price, pictureUrl }) => {
