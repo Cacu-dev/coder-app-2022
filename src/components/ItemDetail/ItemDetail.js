@@ -3,9 +3,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ data, id }) => {
-  console.log(id);
   const product = data.filter((p) => p.id === +id);
-  console.log(product);
   return (
     <>
       <h1>Item Detail</h1>
