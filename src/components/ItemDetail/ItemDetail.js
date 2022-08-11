@@ -1,8 +1,11 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
-const ItemDetail = ({ data }) => {
-  const product = data.slice(0, 1);
+const ItemDetail = ({ data, id }) => {
+  console.log(id);
+  const product = data.filter((p) => p.id === +id);
+  console.log(product);
   return (
     <>
       <h1>Item Detail</h1>
@@ -15,6 +18,7 @@ const ItemDetail = ({ data }) => {
             <h1 className="card__title">{p.title}</h1>
             <p className="card__paragraph">{p.description}</p>
             <p>{p.price}</p>
+            <ItemCount />
             <button>COMPRAR</button>
           </div>
         </div>

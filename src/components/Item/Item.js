@@ -1,7 +1,8 @@
 import React from "react";
 import "./Item.css";
+import { Link } from "react-router-dom";
 
-const Item = ({ title, description, price, pictureUrl }) => {
+const Item = ({ id, title, description, price, pictureUrl }) => {
   return (
     <>
       <div className="card">
@@ -9,7 +10,9 @@ const Item = ({ title, description, price, pictureUrl }) => {
         <h1 className="card__title">{title}</h1>
         <p className="card__paragraph">{description}</p>
         <p>{price}</p>
-        <button>Ver</button>
+        <Link to={`/item-detail-container/${id}`}>
+          <button>Ver Detalle</button>
+        </Link>
       </div>
     </>
   );

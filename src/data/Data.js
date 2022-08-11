@@ -60,7 +60,7 @@ const getFetch = new Promise((response, reject) => {
   if (resp) {
     setTimeout(() => {
       response(Data);
-    }, 2000);
+    }, 1500);
   } else {
     reject(console.error("No hay datos"));
   }
