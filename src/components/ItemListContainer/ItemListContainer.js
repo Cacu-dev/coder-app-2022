@@ -3,7 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import getFetch from "../../data/Data";
 import "./itemListContainer.css";
 
-const ItemListContainer = ({ title }) => {
+const ItemListContainer = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {

@@ -1,8 +1,7 @@
-import { useState } from "react";
 import "./ItemCount.css";
+import { Link } from "react-router-dom";
 
-const ItemCount = () => {
-  const [counter, setCounter] = useState(0);
+const ItemCount = ({ counter, setCounter }) => {
   let stockTotal = 5;
   let initialStock = 0;
   const onAdd = () => {
@@ -15,13 +14,24 @@ const ItemCount = () => {
 
   return (
     <div className="counterContainer">
-      <button className="counterContainer__btn" onClick={onRemove}>
-        -
-      </button>
-      <p className="counterContainer__num">{counter}</p>
-      <button className="counterContainer__btn" onClick={onAdd}>
-        +
-      </button>
+      <div className="counterContainer__btns">
+        <button className="counterContainer__btn" onClick={onRemove}>
+          -
+        </button>
+        <p className="counterContainer__num">{counter}</p>
+        <button className="counterContainer__btn" onClick={onAdd}>
+          +
+        </button>
+      </div>
+      <div>
+        {counter > 0 && (
+          <Link to={`/cart`}>
+            <button className="counterContainer__btn-comprar">
+              Terminar compra
+            </button>
+          </Link>
+        )}
+      </div>
     </div>
   );
 };

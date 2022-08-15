@@ -2,6 +2,7 @@ const Data = [
   {
     id: 1,
     title: "ZAPATILLAS RUNFALCON",
+    genero: "hombre",
     description:
       "ZAPATILLAS DE MÁXIMA SUJECIÓN PARA TUS SALIDAS DIARIAS A CORRER",
     price: "$16.999",
@@ -11,6 +12,7 @@ const Data = [
   {
     id: 2,
     title: "ZAPATILLAS DURAMO SL 2.0",
+    genero: "hombre",
     description:
       "ZAPATILLAS DE RUNNING PARA TU DÍA A DÍA HECHAS PARCIALMENTE CON MATERIALES RECICLADOS",
     price: "$17.999",
@@ -20,6 +22,7 @@ const Data = [
   {
     id: 3,
     title: "Zapatillas Asics Gel-Nagoya 2",
+    genero: "mujer",
     description:
       "La tecnología ASICS GEL™ reduce los impactos, aumentando su absorción y comodidad al talón.",
     price: "$25.199",
@@ -29,6 +32,7 @@ const Data = [
   {
     id: 4,
     title: "Nike Zapatillas Running Revolution 6 NN",
+    genero: "hombre",
     description:
       "COMODIDAD INTUITIVA CON AMORTIGUACIÓN FLEXIBLE. La comodidad es la clave de tu rutina de carrera.",
     price: "$18.450",
@@ -38,6 +42,7 @@ const Data = [
   {
     id: 5,
     title: "Nike Air Max Bolt",
+    genero: "hombre",
     description:
       "Sal a jugar a la ciudad y diviértete como nunca con las zapatillas casuales Nike Air Max Bolt. Con un diseño rompedor e irreverente y una gran comodidad, estas zapatillas se harán parte de tu día a día sin que apenas te des cuenta.",
     price: "$22.199",
@@ -47,6 +52,7 @@ const Data = [
   {
     id: 6,
     title: "ZAsics Zapatillas Running Noosa Tri 14",
+    genero: "mujer",
     description:
       "El calzado NOOSA TRI™ 14 remezcla la inspiración archivada con un calce similar al de un calcetín. Está formado con una construcción ligera y un andar eficiente bajo los pies. Los colores y patrones llamativos en la parte superior de malla técnica están inspirados en los primeros estilos GEL-NOOSA™ de la década de 2000.",
     price: "$19.199",

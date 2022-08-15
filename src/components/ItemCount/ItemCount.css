@@ -1,4 +1,10 @@
 .counterContainer {
+  display: flexbox;
+  flex-direction: column;
+  width: 100px;
+  margin: auto;
+}
+.counterContainer__btns {
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -16,4 +22,7 @@
 .counterContainer__num {
   height: 30px;
   width: 20px;
+}
+.counterContainer__btn-comprar {
+  margin-top: 3px;
 }
