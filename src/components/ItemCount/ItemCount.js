@@ -1,5 +1,4 @@
 import "./ItemCount.css";
-import { Link } from "react-router-dom";
 
 const ItemCount = ({ counter, setCounter }) => {
   let stockTotal = 5;
@@ -22,15 +21,6 @@ const ItemCount = ({ counter, setCounter }) => {
         <button className="counterContainer__btn" onClick={onAdd}>
           +
         </button>
-      </div>
-      <div>
-        {counter > 0 && (
-          <Link to={`/cart`}>
-            <button className="counterContainer__btn-comprar">
-              Terminar compra
-            </button>
-          </Link>
-        )}
       </div>
     </div>
   );

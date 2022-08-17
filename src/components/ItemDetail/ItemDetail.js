@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (data) => {
   const [counter, setCounter] = useState(0);
+  const [mostrarItemCount, setMostrarItemcount] = useState(true);
+
+  const onAddCar = () => {
+    setMostrarItemcount(false);
+  };
   return (
     <>
       <h1>Item Detail</h1>
@@ -16,7 +21,24 @@ const ItemDetail = (data) => {
           <h1 className="card__title">{data.title}</h1>
           <p className="card__paragraph">{data.description}</p>
           <p>{data.price}</p>
-          <ItemCount counter={counter} setCounter={setCounter} />
+
+          <div>
+            <button
+              onClick={onAddCar}
+              className="counterContainer__btn-comprar"
+            >
+              Agregar al carrito
+            </button>
+            {mostrarItemCount ? (
+              <ItemCount counter={counter} setCounter={setCounter} />
+            ) : (
+              <Link to={`/cart`}>
+                <button className="counterContainer__btn-comprar">
+                  Finalizar compra
+                </button>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </>
