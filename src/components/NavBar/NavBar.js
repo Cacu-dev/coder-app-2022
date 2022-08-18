@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import CartWidget from "./CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 const pages = ["Productos", "Promociones", "Blog"];
 const settings = ["Perfil", "Mi Cuenta", "Menu", "Logout"];
@@ -155,7 +156,9 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <CartWidget />
+          <Link to={`/cart`}>
+            <CartWidget />
+          </Link>
         </Toolbar>
       </Container>
     </AppBar>
