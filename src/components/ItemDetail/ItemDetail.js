@@ -9,11 +9,8 @@ const ItemDetail = (data) => {
   const [mostrarItemCount, setMostrarItemcount] = useState(true);
   const { addToCart } = useContext(CartContext);
 
-  const onAddCar = () => {
-    setMostrarItemcount(false);
-  };
-
   const checkout = () => {
+    if (counter > 0) setMostrarItemcount(false);
     addToCart(data, counter);
   };
   return (
@@ -31,7 +28,7 @@ const ItemDetail = (data) => {
           <div>
             <h1>testeando</h1>
             <button
-              onClick={onAddCar}
+              onClick={checkout}
               className="counterContainer__btn-comprar"
             >
               Agregar al carrito
@@ -40,10 +37,7 @@ const ItemDetail = (data) => {
               <ItemCount counter={counter} setCounter={setCounter} />
             ) : (
               <Link to={`/cart`}>
-                <button
-                  onClick={checkout}
-                  className="counterContainer__btn-comprar"
-                >
+                <button className="counterContainer__btn-comprar">
                   Finalizar compra
                 </button>
               </Link>

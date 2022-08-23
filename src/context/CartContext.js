@@ -14,19 +14,28 @@ export const CartProvider = ({ children }) => {
   //clear() // Remover todos los items
   //isInCart: (id) => true|false
 
-  const addToCart = (data, quantity) => {
-    setCart(cart.push({ ...data, quantity }));
-    console.log("🎅🎅🎅", cart);
-  };
-  const removeProductCart = (data) => {
-    setCart(...cart.filter((product) => product.id !== data.id));
-  };
-  const clearCart = (data, quantity) => {
-    setCart(cart.push({ ...data, quantity }));
-  };
   const isInCart = (id) => {
-    "true|false";
+    return cart.find((product) => (product.id === id ? true : false));
   };
+  const addToCart = (data, quantity) => {
+    if (isInCart(data.id)) {
+      setCart(
+        cart.map((product) => {
+          return product.id === data.id
+            ? { ...data, cantidad: product.cantidad + quantity }
+            : product;
+        })
+      );
+    } else {
+      setCart([...cart, { ...data, quantity }]);
+    }
+  };
+  // const removeProductCart = (data) => {
+  //   setCart(...cart.filter((product) => product.id !== data.id));
+  // };
+  // const clearCart = (data, quantity) => {
+  //   setCart(cart.push({ ...data, quantity }));
+  // };
 
   const value = { cart, setCart, addToCart };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

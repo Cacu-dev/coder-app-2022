@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import "./Cart.css";
 
 const Cart = () => {
   const { cart } = useContext(CartContext);
-  console.log(cart);
-
+  const total = cart.reduce((acc, el) => acc + +el.price, 0);
+  console.log(total);
   return (
     <>
       <h1>SOY EL CART</h1>
@@ -14,10 +15,9 @@ const Cart = () => {
           <p>{item.description}</p>
           <p>{item.price}</p>
           <img src={item.pictureUrl} alt="foto" />
-          />
         </div>
       ))}
-      ;
+      <p className="total">TOTAL: {total}</p>
     </>
   );
 };

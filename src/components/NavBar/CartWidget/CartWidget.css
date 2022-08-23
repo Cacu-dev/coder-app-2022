@@ -1,0 +1,19 @@
+.cart {
+  display: flex;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 10px;
+  color: #fff;
+}
+.cart__quantity {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 18px;
+  right: 0px;
+  border-radius: 100%;
+}
